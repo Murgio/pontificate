@@ -16,6 +16,11 @@ class Word:
     def get_json(self):
         self.r = requests.get(self._url(), headers=self._auth)
 
-print("code {}\n".format(r.status_code))
-print("text \n" + r.text)
-print("json \n" + json.dumps(r.json()))
+    def status_code(self):
+        if hasattr(self, "r"):
+            return self.r.status_code
+
+    def __getitem__(self, key):
+        if hasattr(self, "r"):
+            return self.r.json()[key]
+

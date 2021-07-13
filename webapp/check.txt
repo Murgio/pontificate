@@ -1,0 +1,6 @@
+>>> v["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][1]["shortDefinitions"]
+>>> v["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][1]["examples"]
+>>> v["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][1]["definitions"]
+>>> v["results"][0]["lexicalEntries"][0]["lexicalCategory"]
+>>> v["results"][0]["lexicalEntries"][0]["entries"]
+
