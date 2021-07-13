@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from webapp.db import init_db
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
@@ -32,6 +33,9 @@ def create_app(test_config=None):
     from webapp import db
 
     db.init_app(app)
+
+    with app.app_context():
+        db.init_db()
 
     # apply the blueprints to the app
     from webapp import words

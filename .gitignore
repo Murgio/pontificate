@@ -6,6 +6,9 @@ __pycache__/
 # macos
 **/.DS_Store
 
+# Credentials
+*credentials.INI
+
 # C extensions
 *.so
 

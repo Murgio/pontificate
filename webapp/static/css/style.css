@@ -1,0 +1,22 @@
+:root {
+    --atomic-tangerine: #FDA067;
+    --chardonnay: #FFC175;
+    --terra-cotta: #E37B66;
+    --seashell: #FFFBF7;
+    --peach: #FFCFA5;
+    --karry: #FCDAC6;
+}
+body,
+html {
+  background: #f6f6fa;
+  font-size: 13px;
+  font-family: 'Inter', monospace;
+}
+
+.container {
+        font-family: "Inter";
+}
+
+.navbar-item img {
+        max-height: 128px;
+}
