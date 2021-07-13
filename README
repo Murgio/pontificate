@@ -3,6 +3,9 @@ Pontificate
 A small web application (Flask) offering to create and define words, words you might think as quite ostentatious.
 Make no mistake, pontificating your language is a new tool you never wanted.
 
+Runs on a Raspberry Pi 3 Model B on your local network.
+Uses SQLite for storage.
+
 2021 Muriz Serifovic
 
 
