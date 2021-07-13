@@ -10,9 +10,70 @@ body,
 html {
   background: #f6f6fa;
   font-size: 13px;
-  font-family: 'Inter', monospace;
+  font-family: 'Libre Baskerville',, serif;
+  line-height: 1.5;
 }
 
+header {
+	max-width: 700px;
+	margin: 3em auto;
+	font: 24px/1.5 'Libre Baskerville';
+	text-align: center;
+	padding: 0 20px;
+	p {
+		margin-bottom: 15px;
+	}
+}
+.design {
+/*	 background: #f6f6f6;*/
+	 /*width: 650px;*/
+	 /*border: 1px solid #ddd;*/
+	 /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 5px 20px rgba(0, 0, 0, 0.1);*/
+	 padding: 20px;
+	 overflow: visible !important;
+         /*margin-left: 9rem;*/
+}
+ .design .alphabet {
+	 text-align: right;
+	 font-weight: 700;
+	 font-size: 34px;
+	 text-transform: capitalize;
+	 letter-spacing: 2px;
+}
+ .design section {
+	 padding: 0 35px;
+	 margin-top: 3em;
+}
+ .design .word {
+	 font: 700 30px 'Libre Baskerville', serif;
+	 word-break: break-all;
+}
+ .design .type {
+	 font: italic 500 18px 'Libre Baskerville', serif;
+	 margin: 10px 0;
+}
+ .design .context {
+	 margin: 25px 0;
+	 width: 90%;
+}
+ .design .image {
+	 font-style: italic;
+	 text-align: center;
+	 margin: 3em 0;
+	 width: 100%;
+	 overflow: hidden;
+}
+ .design .image #imager {
+	 width: auto;
+	 height: 300px;
+	 border: 1px solid;
+	 margin: auto;
+	 position: relative;
+}
+ .design .image p {
+	 display: block;
+	 margin-top: 8px;
+}
 .container {
         font-family: "Inter";
 }
@@ -20,3 +81,82 @@ html {
 .navbar-item img {
         max-height: 128px;
 }
+
+
+/* MAIN POSTS*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+.faux-columns {
+  width: 80%;
+  margin:3em auto;
+background-image: -webkit-linear-gradient(left, #f2f7fa 25%, #fff 75%);
+background-image: -moz-linear-gradient(left, #f2f7fa 25%, #fff 75%);
+background-image: -o-linear-gradient(left, #f2f7fa 25%, #fff 75%);
+background-image: linear-gradient(left, #f2f7fa 25%, #fff 75%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f2f7fa), color-stop(25%, #f2f7fa), color-stop(25%,#ffffff), color-stop(100%,#ffffff));
+background: -moz-linear-gradient(left, #f2f7fa 0%, #f2f7fa 25%, #ffffff 25%, #ffffff 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f2f7fa), color-stop(25%,#f2f7fa), color-stop(25%,#ffffff), color-stop(100%,#ffffff));
+background: -o-linear-gradient(left, #f2f7fa 0%,#f2f7fa 25%,#ffffff 25%,#ffffff 100%);
+background: -ms-linear-gradient(left, #f2f7fa 0%,#f2f7fa 25%,#ffffff 25%,#ffffff 100%);
+background: linear-gradient(left, #f2f7fa 0%,#f2f7fa 25%,#ffffff 25%,#ffffff 100%);
+border:1px solid #c1c1c2;
+}
+
+.col-1, .col-2 {
+  float:left;
+  vertical-align:top;
+  padding:2em 3em;
+ }
+
+.col-1 {
+  position:relative;
+  width:25%;
+  background:#F2F7FC;
+  border-right:1px solid #c1c1c2;
+
+}
+
+.col-2 {
+  width:75%;
+  border-left:1px solid #c1c1c2;
+  margin-left: -1px;
+
+}
+
+.col-1:after,
+.col-1:before {
+   top:100%;
+   border:solid transparent;content:"";
+   height:0;
+   width:0;
+   position:absolute;
+   pointer-events:none;
+   display:block;
+}
+.col-1:after  {
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #f2f7fa;
+  border-style: solid;
+  border-width: 21px 0 21px 22px;
+  left:100%;
+  top: 47px;
+}
+.col-1:before {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #c1c1c2;
+  border-style: solid;
+  border-width: 22px 0 22px 23px;
+  left: 100%;
+  top: 46px; }
+

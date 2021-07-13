@@ -16,7 +16,6 @@ class Word:
     def get_json(self):
         self.r = requests.get(self._url(), headers=self._auth)
 
-r = requests.get(url, headers=auth)
 print("code {}\n".format(r.status_code))
 print("text \n" + r.text)
 print("json \n" + json.dumps(r.json()))
