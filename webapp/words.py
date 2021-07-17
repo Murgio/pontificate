@@ -29,7 +29,7 @@ def index():
 @bp.route("/search", methods=['GET', 'POST'])
 def search():
     """Search for the definitions of a word"""
-    name = request.args['q']
+    name = request.form['q']
     word = Word(name, AUTH)
     word.get_json()
     if word.status_code() != 200:

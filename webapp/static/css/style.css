@@ -115,6 +115,10 @@ background: linear-gradient(left, #f2f7fa 0%,#f2f7fa 25%,#ffffff 25%,#ffffff 100
 border:1px solid #c1c1c2;
 }
 
+.is-borderless {
+border: 0px;
+}
+
 .col-1, .col-2 {
   float:left;
   vertical-align:top;
