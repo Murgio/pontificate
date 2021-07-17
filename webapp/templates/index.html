@@ -41,18 +41,21 @@
   <div class="col-2">
   </div>
 </div>
+
+
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
 <div class="container is-widescreen" style="max-width:80%;">
 <div class="notification is-danger is-light">
   <button class="delete"></button>
-{% with messages = get_flashed_messages() %}
-   {% if messages %}
       {% for message in messages %}
          {{ message }}
       {% endfor %}
    {% endif %}
+
+</div>
+</div>
 {% endwith %}
-</div>
-</div>
 
 
 <div class="faux-columns cf">
