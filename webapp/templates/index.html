@@ -22,12 +22,36 @@
             </a>
     </section>
   </section>
+
+
 <header>
         <p>Inspired by David Foster Wallace's interview. <em> "The word pontificate? - To speak pompously about very complex abstruse matters".</em> </p>
 </header>
 
 <div class="container is-widescreen" style="max-width:80%;">
 <input class="input is-medium" type="text" placeholder="Search for similar words">
+</div>
+
+<div class="faux-columns cf" style="margin-bottom:0px;">
+  <div class="col-1">
+    <h1>
+            <input class="input" type="text" placeholder="Search definitions">
+    </h1>
+  </div>
+  <div class="col-2">
+  </div>
+</div>
+<div class="container is-widescreen" style="max-width:80%;">
+<div class="notification is-danger is-light">
+  <button class="delete"></button>
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+</div>
 </div>
 
 
@@ -42,47 +66,73 @@
 "permissiveness is used almost universally as a pejorative term"
   </div>
 </div>
-<div class="faux-columns cf">
-  <div class="col-1">
-    <h1>pejorative</h1>
-  </div>
-  <div class="col-2">
-    <h4> Second column which in some cases will be much taller than column</h4>
-    expressing contempt or disapproval.
-"permissiveness is used almost universally as a pejorative term"
-  </div>
-</div>
-<div class="faux-columns cf">
-  <div class="col-1">
-    <h1>pejorative</h1>
-  </div>
-  <div class="col-2">
-    <h4> Second column which in some cases will be much taller than column</h4>
-    expressing contempt or disapproval.
-"permissiveness is used almost universally as a pejorative term"
-  </div>
-</div>
-<div class="faux-columns cf">
-  <div class="col-1">
-    <h1>pejorative</h1>
-  </div>
-  <div class="col-2">
-    <h4> Second column which in some cases will be much taller than column</h4>
-    expressing contempt or disapproval.
-"permissiveness is used almost universally as a pejorative term"
-  </div>
-</div>
-<div class="faux-columns cf">
-  <div class="col-1">
-    <h1>pejorative</h1>
-  </div>
-  <div class="col-2">
-    <h4> Second column which in some cases will be much taller than column</h4>
-    expressing contempt or disapproval.
-"permissiveness is used almost universally as a pejorative term"
-  </div>
-</div>
 
+<div class="faux-columns cf">
+        {% include 'dropdown_menu.html' %}
+  <div class="col-1">
+    <h1>pejorative</h1>
+  </div>
+  <div class="col-2">
+    <h4> Second column which in some cases will be much taller than column</h4>
+    expressing contempt or disapproval.
+"permissiveness is used almost universally as a pejorative term"
+  </div>
+</div>
+<div class="faux-columns cf">
+        {% include 'dropdown_menu.html' %}
+  <div class="col-1">
+    <h1>pejorative</h1>
+  </div>
+  <div class="col-2">
+    <h4> Second column which in some cases will be much taller than column</h4>
+    expressing contempt or disapproval.
+"permissiveness is used almost universally as a pejorative term"
+  </div>
+</div>
+<div class="faux-columns cf">
+        {% include 'dropdown_menu.html' %}
+  <div class="col-1">
+    <h1>pejorative</h1>
+  </div>
+  <div class="col-2">
+    <h4> Second column which in some cases will be much taller than column</h4>
+    expressing contempt or disapproval.
+"permissiveness is used almost universally as a pejorative term"
+  </div>
+</div>
+<div class="faux-columns cf">
+        {% include 'dropdown_menu.html' %}
+  <div class="col-1">
+    <h1>pejorative</h1>
+  </div>
+  <div class="col-2">
+    <h4> Second column which in some cases will be much taller than column</h4>
+    expressing contempt or disapproval.
+"permissiveness is used almost universally as a pejorative term"
+  </div>
+</div>
+<div class="faux-columns cf">
+        {% include 'dropdown_menu.html' %}
+  <div class="col-1">
+    <h1>pejorative</h1>
+  </div>
+  <div class="col-2">
+    <h4> Second column which in some cases will be much taller than column</h4>
+    expressing contempt or disapproval.
+"permissiveness is used almost universally as a pejorative term"
+  </div>
+</div>
+<div class="faux-columns cf">
+        {% include 'dropdown_menu.html' %}
+  <div class="col-1">
+    <h1>pejorative</h1>
+  </div>
+  <div class="col-2">
+    <h4> Second column which in some cases will be much taller than column</h4>
+    expressing contempt or disapproval.
+"permissiveness is used almost universally as a pejorative term"
+  </div>
+</div>
    </body>
 <footer class="footer" style="background-color:#f6f6fa;">
   <div class="content has-text-centered">

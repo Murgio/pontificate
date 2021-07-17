@@ -8,6 +8,9 @@ from flask import url_for
 from werkzeug.exceptions import abort
 
 from webapp.db import get_db
+from webapp.oxford_dict import Word
+from webapp.auth import create_auth
+AUTH = create_auth()
 
 bp = Blueprint("words", __name__)
 
@@ -23,6 +26,16 @@ def index():
     ).fetchall()
     return render_template("index.html", posts=posts, id="1")
 
+@bp.route("/search", methods=['GET', 'POST'])
+def search():
+    """Search for the definitions of a word"""
+    name = request.args['q']
+    word = Word(name, AUTH)
+    word.get_json()
+    if word.status_code() != 200:
+        flash(f"Word {name} doesn't exist.")
+
+    return render_template("index.html",  id="1")
 
 def get_post(id):
     """Get a post
