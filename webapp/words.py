@@ -24,25 +24,45 @@ def index():
         " FROM words"
         " ORDER BY created DESC"
     ).fetchall()
-    return render_template("index.html", posts=posts, id="1")
+    return render_template("index.html", posts=posts, id="1", n_entries=len(posts))
 
 @bp.route("/search", methods=['GET', 'POST'])
 def search():
-    """Search for the definitions of a word"""
+    """Search for the definitions of a word.
+
+    Contains lexical category, definitions (short and long ones)
+    and examples.
+    """
     name = request.form['q']
     word = Word(name, AUTH)
     word.get_json()
     if word.status_code() != 200:
         flash(f"Word {name} doesn't exist.")
 
-    return render_template("index.html",  id="1")
+    categories = []
+    definitions = []
+    short_definitions = []
+    examples = []
+    for result in word["results"]:
+        for entry in result["lexicalEntries"]:
+            categories.append(entry["lexicalCategory"])
+            for sense in entry["senses"]:
+                definitions.append(sense["definitions"])
+                short_definitions.append(sense["shortDefinitions"])
+                examples.append(sense["examples"])
+
+
+    return render_template("index.html",
+                          categories=categories,
+                          definitions=definitions,
+                          short_definitions=short_definitions,
+                          examples=examples)
 
 def get_post(id):
     """Get a post
     :param id: id of post to get
     :return: the post with author information
     :raise 404: if a post with the given id doesn't exist
-    :raise 403: if the current user isn't the author
     """
     post = (
         get_db()
@@ -57,9 +77,6 @@ def get_post(id):
 
     if post is None:
         abort(404, f"Post id {id} doesn't exist.")
-
-    if check_author and post["author_id"] != g.user["id"]:
-        abort(403)
 
     return post
 
