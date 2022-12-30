@@ -1,12 +1,14 @@
 Pontificate
+-----------
 
-A small web application (Flask) offering to create and define words, words you might think as quite ostentatious.
-Make no mistake, pontificating your language is a new tool you never wanted.
+Pontificate is a small web application built using Flask that allows users to create
+and define their own words. This tool can be useful for those who want to expand their vocabulary
+and add a touch of grandiosity to their language.
 
-Runs on a Raspberry Pi 3 Model B on your local network.
-Uses SQLite for storage.
+Pontificate is designed to run on a Raspberry Pi 3 Model B and can be
+accessed on your local network. It utilizes SQLite for storage,
+providing a simple and reliable means of data management.
 
 ***************
-2021 Muriz Serifovic
 
-
+2021 Muriz S.
